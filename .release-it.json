@@ -5,8 +5,7 @@
   },
   "hooks": {
     "before:init": [
-      "git pull",
-      "npm run lint"
+      "git pull"
     ],
     "after:bump": "npx auto-changelog -p"
   },
