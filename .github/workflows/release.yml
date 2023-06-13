@@ -24,8 +24,8 @@ jobs:
 
         - name: Initialize Git user
           run: |
-            git config --global user.name "Maxym Rybak"
-            git config --global user.email "maxymrybak@gmail.com"
+            git config user.name "${GITHUB_ACTOR}"
+            git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         - name: check env
           run: |
             npm ci
