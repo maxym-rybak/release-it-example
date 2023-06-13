@@ -4,9 +4,7 @@
     "commitMessage": "chore: release v${version}"
   },
   "hooks": {
-    "before:init": [
-      "git pull"
-    ],
+    "before:init": [],
     "after:bump": "npx auto-changelog -p"
   },
   "github": {
