@@ -21,6 +21,10 @@ jobs:
           with:
             node-version: '18.16.0'
 
+        - name: Initialize Git user
+          run: |
+            git config --global user.name "Maxym Rybak"
+            git config --global user.email "maxymrybak@gmail.com"
         - name: check env
           run: |
             npm ci
