@@ -6,14 +6,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  REACT_APP_BRIDGE: ${{ secrets.REACT_APP_BRIDGE }}
-  REACT_APP_STORAGE: ${{ secrets.REACT_APP_STORAGE }}
-  REACT_APP_MORALIS_PROXY_URL: ${{ secrets.REACT_APP_MORALIS_PROXY_URL }}
-  REACT_APP_CRYPTO_TRADING_WIDGET_URL: ${{ secrets.REACT_APP_CRYPTO_TRADING_WIDGET_URL }}
-  
 jobs:
   release:
       runs-on: ubuntu-22.04
@@ -28,7 +20,7 @@ jobs:
           run: |
             git config user.name "${GITHUB_ACTOR}"
             git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        - name: check env
+        - name: install dependencies and release
           run: |
             npm ci
             npm run release
