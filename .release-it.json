@@ -7,10 +7,10 @@
     "after:bump": "npx auto-changelog -p"
   },
   "github": {
-    "release": true
+    "release": true,
+    "releaseName": "Release ${version - 1}"
   },
   "npm": {
-    "publish": false,
-    "allowSameVersion": true
+    "publish": false
   }
 }
