@@ -1,7 +1,7 @@
 {
   "git": {
     "requiredBranch": "main",
-    "commitMessage": "chore: release v${version}"
+    "commit": false
   },
   "hooks": {
     "after:bump": "npx auto-changelog -p"
@@ -11,6 +11,5 @@
   },
   "npm": {
     "publish": false,
-    "ignoreVersion": true
   }
 }
