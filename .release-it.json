@@ -2,9 +2,6 @@
   "git": {
     "requiredBranch": "main"
   },
-  "hooks": {
-    "after:bump": "npx auto-changelog -p"
-  },
   "github": {
     "release": true
   },
