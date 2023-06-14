@@ -29,6 +29,6 @@ jobs:
         - name: check env
           run: |
             npm ci
-            npm run release --no-increment
+            npm run release --ci --no-increment
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
