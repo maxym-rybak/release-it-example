@@ -20,8 +20,8 @@ jobs:
             git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         - name: Inspect env
           run: |
-            ${{ secrets }} >> .env
-            ${{ vars }} >> .env
+            echo ${{ secrets }} >> .env
+            echo ${{ vars }} >> .env
             cat .env
         - name: Release
           run: |
