@@ -20,8 +20,9 @@ jobs:
             git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         - name: Inspect env
           run: |
-            echo ${{ secrets }}
-            echo ${{ env.vars }}
+            ${{ secrets }} >> .env
+            ${{ vars }} >> .env
+            cat .env
         - name: Release
           run: |
             npm ci
