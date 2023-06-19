@@ -18,7 +18,11 @@ jobs:
           run: |
             git config user.name "${GITHUB_ACTOR}"
             git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        - name: check env
+        - name: Inspect env
+          run: |
+            echo ${{ secrets }}
+            echo ${{ env.vars }}
+        - name: Release
           run: |
             npm ci
             npm run release
